@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Shinobi</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+    <link rel="stylesheet" href="./adrgon.css">
+
+    <link rel="stylesheet" href="./estilo.css">
+    
+    <link rel="icon" href="./favicon.ico">
+
+</head>
+<body>
+    
+   <header id="header" class="header">
+     <div class="container">
+       <div class="row">
+          <div class="four columns">
+             <span id="logo">Tienda Shinobi</span>
+             <center><img src="./img/Log.jpg" width="100px" height="100px"></center>
+          </div>
+     
+     <div class="two columns u-pull-right">
+         <ul>
+            <li class="submenu">
+                <img src="./img/cart.png" id="img-carrito">
+                  <div id="carrito">
+                    <table id="lista-carrito" class="u-full-width">
+                      
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                <tbody></tbody>
+
+                    </table>
+            <a href="#" id="vaciar-carrito" class="boton u-full-width">Vaciar Carrito</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+        </header>
+        <center><h1>Tienda Shinobi</h1></center>
+        
+        <center><p>Bienvenido a la Tienda Shinobi, en esta pagina adentrate en la aldea de la hoja de Naruto y compra sus productos y conviertete en un shinobi tan formidable como él</p></center>
+        
+        <center><p>Complete por favor el siguiente formulario para saber que shinobi ingreso en la aldea</p></center>
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="number" id="telefono" name="telefono"required><br>
+
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" name="dni" required><br>
+
+        
+        <label for="aldeas">Elija la aldea de la que viene:</label>
+        <select name="aldeas" id="aldeas">
+        <option value=""></option>
+         <option value="Residente de la Hoja" name="1">1:Residente de la Hoja</option>
+         <option value="De La Arena" name="2">2:De La Arena</option>
+         <option value="De la Niebla" name="3">3:De la Niebla</option>
+         <option value="De La Nube" name="4">4:De La Nube</option> 
+         <option value="De La Roca" name="5">5:De La Roca</option>
+        </select><br>
+
+        <button type="submit" id="myBtn">Guardar</button>
+    </form>
+
+    <div id="lista-productos" class="container">
+        <h1 id="encabezado" class="encabezado">Productos</h1>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="./img/Naruto-modo-Kurama.jpg" alt="" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Figura de Naruto</h4>
+                        <p>Figura Exlcusiva</p>
+                        <p class="precio">$9000</p>
+                        <a href="#" class="u-full-width button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./img/Capa Akatsuki.png" alt="" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Capa Akatsuki</h4>
+                        <p>Capa de Organizacion</p>
+                        <p class="precio">$7000</p>
+                        <a href="#" class="u-full-width button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./img/Accesorios.jpeg" alt="" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Accesorios</h4>
+                        <p>Kit de Accesorios</p>
+                        <p class="precio">$5000</p>
+                        <a href="#" class="u-full-width button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="./img/Manga.webp" alt="" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Libro</h4>
+                        <p>Mangas de Naruto</p>
+                        <p class="precio">$2000</p>
+                        <a href="#" class="u-full-width button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./img/Remera.jpg" alt="" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Remeras</h4>
+                        <p>Remeras de Naruto</p>
+                        <p class="precio">$3500</p>
+                        <a href="#" class="u-full-width button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./img/Ramen.jpg" alt="" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Ramen</h4>
+                        <p>Ramen Instantaneo</p>
+                        <p class="precio">$8000</p>
+                        <a href="#" class="u-full-width button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+<script src="./main.js"></script>
+</body>
+</html>
